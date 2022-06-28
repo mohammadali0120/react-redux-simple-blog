@@ -3,6 +3,7 @@
 * Typescript 
 * React.js V18
 * React Router V6
+* Formik for validation
 * Redux & Redux Toolkit & Redux Toolkit Thunk
 * Functional Based Component
 * Tailwind.css
