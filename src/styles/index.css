@@ -1,0 +1,17 @@
+@import url("./tailwind.css");
+@import url("../assets/fonts/fonts.css");
+
+* {
+  direction: rtl;
+  font-family: vazir;
+}
+body {
+  @apply bg-gray-50;
+}
+
+.dir-ltr {
+  direction: ltr;
+}
+.dir-rtl {
+  direction: rtl;
+}

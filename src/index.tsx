@@ -1,19 +1,26 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import React from "react";
+import axios from "axios";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import { store } from "./app/store";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./styles/index.css";
 
-const container = document.getElementById('root')!;
+axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+
+const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,0 +1,44 @@
+@font-face {
+  src: url(./vazir/Vazir-Regular.eot);
+  src: url(./vazir/Vazir-Regular.ttf);
+  src: url(./vazir/Vazir-Regular.woff);
+  src: url(./vazir/Vazir-Regular.woff2);
+  font-family: vazir;
+}
+@font-face {
+  src: url(./vazir/Vazir-Bold.eot);
+  src: url(./vazir/Vazir-Bold.ttf);
+  src: url(./vazir/Vazir-Bold.woff);
+  src: url(./vazir/Vazir-Bold.woff2);
+  font-family: vazir-bold;
+}
+
+@font-face {
+  src: url(./vazir/Vazir-Black.eot);
+  src: url(./vazir/Vazir-Black.ttf);
+  src: url(./vazir/Vazir-Black.woff);
+  src: url(./vazir/Vazir-Black.woff2);
+  font-family: vazir-balck;
+}
+@font-face {
+  src: url(./vazir/Vazir-Thin.eot);
+  src: url(./vazir/Vazir-Thin.ttf);
+  src: url(./vazir/Vazir-Thin.woff);
+  src: url(./vazir/Vazir-Thin.woff2);
+  font-family: vazir-thin;
+}
+@font-face {
+  src: url(./Pacifico-Regular.ttf);
+  font-family: pacifico;
+}
+
+@font-face {
+  font-family: caveat;
+  src: url(./Caveat-Bold.ttf);
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(./Roboto-Regular.ttf);
+  src: url(./Roboto-Medium.ttf);
+}
