@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Field } from "formik";
 
 interface Props {
@@ -6,36 +5,21 @@ interface Props {
   name: string;
   errors: { filed: string | undefined };
   touched: { filed: boolean | undefined };
-  onEmitChange: Function;
 }
 
-const UiFormInput = ({
-  placeholder,
-  name,
-  errors,
-  touched,
-  onEmitChange,
-}: Props) => {
-  const [input, setInput] = useState("");
-
-  const onChange = (value: string) => {
-    setInput(value);
-
-    onEmitChange(value);
-  };
-
+const UiFormInput = ({ placeholder, name, errors, touched }: Props) => {
   return (
     <div className="w-full">
       <Field
         className="border p-3 rounded-md focus:outline-none w-full"
         name={name}
         placeholder={placeholder}
-        value={input}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          onChange(e.target.value)
-        }
       />
-      {errors.filed && touched.filed ? <div><p className="text-red-600 lg:text-sm text-xs"> {errors.filed} </p></div> : null}
+      {errors.filed && touched.filed ? (
+        <div>
+          <p className="text-red-600 lg:text-sm text-xs"> {errors.filed} </p>
+        </div>
+      ) : null}
     </div>
   );
 };

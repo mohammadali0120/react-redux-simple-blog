@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import * as Yup from "yup";
 import { Form, Formik } from "formik";
 
@@ -21,17 +20,8 @@ const HomePostsAddPost = () => {
       .required("این فیلد ضروری است"),
   });
 
-  const [form, setForm] = useState<{ title: string; body: string }>({
-    title: "",
-    body: "",
-  });
-
-  const onChange = (value: string, filed: "title" | "body") => {
-    setForm((prevState: any) => ({ ...prevState, [filed]: value }));
-  };
-  const onSubmit = (form: any) => {
-    dispatch(addNewPost(form));
-    setForm({ title: "", body: "" });
+  const onSubmit = (value: { title: string; body: string }) => {
+    dispatch(addNewPost(value));
   };
 
   return (
@@ -41,7 +31,7 @@ const HomePostsAddPost = () => {
       </div>
 
       <Formik
-        initialValues={form}
+        initialValues={{ title: "", body: "" }}
         validationSchema={ValidationSchema}
         onSubmit={(values) => {
           onSubmit(values);
@@ -55,7 +45,6 @@ const HomePostsAddPost = () => {
                 touched={{ filed: touched.title }}
                 name="title"
                 placeholder="عنوان پست"
-                onEmitChange={(e: string) => onChange(e, "title")}
               />
             </div>
 
@@ -65,7 +54,6 @@ const HomePostsAddPost = () => {
                 touched={{ filed: touched.body }}
                 name="body"
                 placeholder="متن پست"
-                onEmitChange={(e: string) => onChange(e, "body")}
               />
             </div>
 
